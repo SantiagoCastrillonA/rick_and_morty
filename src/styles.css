@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Get Schwifty';
+  src: url('/get_schwifty.ttf') format('truetype');
+}
+
+body {
+  background-image: url('https://wallpapercave.com/wp/wp6737033.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  font-family: 'Get Schwifty', Roboto, "Helvetica Neue", sans-serif;
+}
