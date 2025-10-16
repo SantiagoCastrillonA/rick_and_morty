@@ -12,38 +12,61 @@ h1 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+  gap: 2rem; /* Aumentamos un poco el espacio para que respiren mejor */
 }
 
 .card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* MODIFICADO: Fondo oscuro y semitransparente */
+  background-color: rgba(35, 37, 42, 0.8);
+
+  /* NUEVO: Efecto de vidrio esmerilado para desenfocar el fondo */
+  backdrop-filter: blur(10px);
+
+  border-radius: 15px; /* Bordes un poco más redondeados */
+
+  /* NUEVO: Borde sutil que atrapa la luz */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* MODIFICADO: Sombra más pronunciada para dar profundidad */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+
   overflow: hidden;
-  transition: transform 0.2s;
+
+  /* MODIFICADO: Transición más suave y aplicada a todas las propiedades */
+  transition: all 0.3s ease;
+
+  /* MODIFICADO: El texto debe ser claro para leerse sobre fondo oscuro */
+  color: #f5f5f5;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  /* MODIFICADO: Un efecto más dramático al pasar el mouse */
+  transform: translateY(-10px) scale(1.03);
+
+  /* NUEVO: Sombra temática que simula el brillo de un portal */
+  box-shadow: 0 12px 40px rgba(151, 206, 76, 0.4);
 }
 
 .card img {
   width: 100%;
   height: auto;
+  display: block; /* Buena práctica para eliminar espacios extra */
 }
 
 .card-body {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .card-body h2 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Un poco más grande el nombre */
 }
 
 .card-body p {
   margin: 0;
-  color: #666;
+  color: #ccc; /* Un gris más claro para el texto secundario */
+  display: flex; /* Para alinear el punto de estado con el texto verticalmente */
+  align-items: center;
 }
 
 .status-alive {
@@ -71,4 +94,16 @@ h1 {
   background-color: gray;
   border-radius: 50%;
   margin-right: 0.5rem;
+}
+
+.titulo {
+  width: fit-content;
+  margin: 0 auto 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #97ce4c;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  text-shadow: 4px 4px 8px #000000;
+  margin-bottom: 30px;
 }

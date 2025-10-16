@@ -1,12 +1,15 @@
 <div class="container">
-  <h1>Galeria de Personajes de Rick and Morty</h1>
+  <div class="titulo">
+    <h1>Galeria de Personajes de Rick and Morty</h1>
+  </div>
   <p *ngIf="characters.length === 0">Cargando personajes...</p>
   <div class="gallery">
     <div class="card" *ngFor="let character of characters">
       <img [src]="character.image" [alt]="character.name" />
       <div class="card-body">
         <h2>{{ character.name }}</h2>
-        <p><span [ngClass]="'status-' + character.status.toLowerCase()"></span> {{ character.status }} - {{ character.species }}</p>
+        <p><span [ngClass]="'status-' + character.status.toLowerCase()"></span> {{ character.status }} - {{
+          character.species }}</p>
       </div>
     </div>
   </div>
