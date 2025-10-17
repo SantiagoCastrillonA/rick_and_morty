@@ -8,8 +8,12 @@
       <img [src]="character.image" [alt]="character.name" />
       <div class="card-body">
         <h2>{{ character.name }}</h2>
-        <p><span [ngClass]="'status-' + character.status.toLowerCase()"></span> {{ character.status }} - {{
-          character.species }}</p>
+        <p>
+          <span class="status-dot" [class.status-alive]="character.status === 'Alive'"
+            [class.status-dead]="character.status === 'Dead'"
+            [class.status-unknown]="character.status === 'unknown'"></span>
+          {{ character.status }} - {{ character.species }}
+        </p>
       </div>
     </div>
   </div>
