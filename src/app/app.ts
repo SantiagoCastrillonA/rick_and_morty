@@ -17,7 +17,7 @@ export class App implements OnInit {
   private isLoading = false;
   private hasMore = true;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.loadCharacters();
